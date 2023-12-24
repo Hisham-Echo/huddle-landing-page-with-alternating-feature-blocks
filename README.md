@@ -91,4 +91,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
-[]**Live Preview**](https://Hisham-Echo.github.io/huddle-landing-page-with-alternating-feature-blocks)
+[**Live Preview**](https://Hisham-Echo.github.io/huddle-landing-page-with-alternating-feature-blocks)
