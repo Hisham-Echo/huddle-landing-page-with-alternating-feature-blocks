@@ -1,8 +1,264 @@
+/** Mobile-First Workflow **/
+/*? Open Sans */
+/*! Body, Call-to-actions */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/*? Poppins */
+/*! Headings */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+/*? START global */
 * {
     box-sizing: border-box;
-    transition: all ease-in-out 0.25s;
-    -webkit-transition: all ease-in-out 0.25s;
-    -moz-transition: all ease-in-out 0.25s;
-    -ms-transition: all ease-in-out 0.25s;
-    -o-transition: all ease-in-out 0.25s;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    -webkit-transition: background-color ease-in-out 0.2s,
+        color ease-in-out 0.2s;
+    -moz-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    -ms-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    -o-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 18px;
+
+    /* ## Colors */
+    /* ### Primary */
+    --Pink: hsl(322, 100%, 66%);
+    /* ### Neutral */
+    --Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+.img img,
+figure img {
+    width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a button,
+main section {
+    border: none;
+    box-shadow: 0 0 20px 0 #d0d0d0;
+}
+
+a button:hover {
+    cursor: pointer;
+}
+
+button {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+main section,
+main .popup {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+/*? END global */
+
+/*! START header */
+header {
+    padding: 20px;
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-color: var(--Very-Pale-Cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 75px;
+}
+
+/** START nav */
+header nav {
+    margin: 30px auto 80px ;
+    padding: 2%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .img {
+    max-width: 40%;
+}
+
+header nav a button {
+    background-color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 8px 30px;
+}
+/** END nav */
+/*? START landing */
+header .landing {
+    padding: 0 3% 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header .landing .txt {
+    line-height: 1.5;
+    text-align: center;
+    max-width: 520px;
+}
+
+header .landing .txt a button {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    background-color: var(--Pink, pink);
+    padding: 15px 20px;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+}
+
+header .landing .txt a button:hover {
+    background-color: hsla(322, 100%, 66%, 75%);
+}
+
+@media (min-width: 900px) {
+    header .landing {
+        flex-wrap: nowrap;
+        gap: 50px;
+        justify-content: space-between;
+    }
+
+    header .landing .txt {
+        text-align: left;
+    }
+
+    header .landing .img {
+        min-width: 50%;
+    }
+}
+/*? END landing */
+/*! END header */
+
+/*? START main */
+main {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 50px;
+}
+/** START sections */
+main section {
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+main section figcaption p {
+    color: var(--Grayish-Blue, grey);
+    padding: 10px 20px;
+}
+/** END sections */
+
+/*! START popup */
+main .popup {
+    position: relative;
+    top: 200px;
+    z-index: 20;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    box-shadow: 0 0 30px 0 #0000000f;
+    text-align: center;
+    padding: 50px 5%;
+    height: 230px;
+}
+
+main .popup button {
+    background-color: var(--Pink);
+    border: none;
+    padding: 20px;
+    width: 60%;
+    color: white;
+    font-weight: bold;
+}
+/*! END popup */
+@media (min-width: 900px) {
+    main {
+        padding: 6%;
+        align-items:center;
+    }
+
+    main section {
+        text-align: left;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .grow figcaption,
+    .users figcaption {
+        order: -1;
+    }
+
+    main section figcaption p {
+        padding: 0;
+    }
+
+    main section {
+        padding: 3% 8%;
+    }
+
+    main .popup {
+        width: 60%;
+    }
+}
+/*? END main */
+
+/** START footer */
+footer {
+    position: relative;
+    padding-top: 150px;
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: 1fr 2fr 1fr; */
+}
+
+footer .logo {
+    width: 30%;
+    filter:grayscale(1) invert(1) brightness(10);
+    -webkit-filter:grayscale(1) invert(1) brightness(10);
+}
+/** END footer */
