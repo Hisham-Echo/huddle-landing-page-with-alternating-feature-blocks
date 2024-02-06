@@ -195,7 +195,7 @@ main section {
     text-align: center;
 }
 
-main section figcaption p {
+main section .cap p {
     color: var(--Grayish-Blue, grey);
     padding: 10px 20px;
 }
@@ -237,12 +237,12 @@ main .popup button {
         flex-wrap: nowrap;
     }
 
-    .grow figcaption,
-    .users figcaption {
+    .grow .cap,
+    .users .cap {
         order: -1;
     }
 
-    main section figcaption p {
+    main section .cap p {
         padding: 0;
     }
 
